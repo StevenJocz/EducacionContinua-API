@@ -1,0 +1,13 @@
+D:\Otros Proyectos\EducacionContinua-API\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\Otros Proyectos\EducacionContinua-API\Domain\bin\Debug\net7.0\Domain.dll
+D:\Otros Proyectos\EducacionContinua-API\Domain\bin\Debug\net7.0\Domain.pdb
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\Domain.sourcelink.json
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\Domain.dll
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\Domain.pdb
+D:\Otros Proyectos\EducacionContinua-API\Domain\obj\Debug\net7.0\ref\Domain.dll

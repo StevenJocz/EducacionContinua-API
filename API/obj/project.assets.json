@@ -2267,20 +2267,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Steve\\.nuget\\packages\\": {}
+    "C:\\Users\\desarrollador1.sion\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\EducacionContinua.csproj",
+      "projectUniqueName": "D:\\Otros Proyectos\\EducacionContinua-API\\API\\EducacionContinua.csproj",
       "projectName": "EducacionContinua",
-      "projectPath": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\EducacionContinua.csproj",
-      "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\obj\\",
+      "projectPath": "D:\\Otros Proyectos\\EducacionContinua-API\\API\\EducacionContinua.csproj",
+      "packagesPath": "C:\\Users\\desarrollador1.sion\\.nuget\\packages\\",
+      "outputPath": "D:\\Otros Proyectos\\EducacionContinua-API\\API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Steve\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\desarrollador1.sion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -2293,8 +2301,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Proyectos Desarrollo\\MaosWord\\Service\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\Persistence\\Persistence.csproj"
+            "D:\\Otros Proyectos\\EducacionContinua-API\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\Otros Proyectos\\EducacionContinua-API\\Persistence\\Persistence.csproj"
             }
           }
         }
@@ -2329,6 +2337,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2337,7 +2363,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

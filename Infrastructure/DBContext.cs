@@ -1,4 +1,5 @@
-﻿using Domain.Entities.UsuarioE;
+﻿using Domain.Entities;
+using Domain.Entities.UsuarioE;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -29,5 +30,39 @@ namespace Infrastructure
 
         // Usuario
         public virtual DbSet<UsuarioE> UsuarioEs { get; set; }
+        public virtual DbSet<TipoPersonaE> TipoPersonaE { get; set; }
+        public virtual DbSet<TitulosProfesorE> TitulosProfesorE { get; set; }
+        public virtual DbSet<DependenciasE> DependenciasE { get; set; }
+        public virtual DbSet<CategoriasE> CategoriasE { get; set; }
+        public virtual DbSet<PersonasE> PersonasE { get; set; }
+        public virtual DbSet<CursosE> CursosE { get; set; }
+        public virtual DbSet<ModulosE> ModulosE { get; set; }
+        public virtual DbSet<CuponesE> CuponesE { get; set; }
+        public virtual DbSet<GruposE> GruposE { get; set; }
+        public virtual DbSet<TemasE> TemasE { get; set; }
+        public virtual DbSet<QuizE> QuizE { get; set; }
+        public virtual DbSet<PreguntasE> PreguntasE { get; set; }
+        public virtual DbSet<RespuestasE> RespuestasE { get; set; }
+        public virtual DbSet<QuizPersonaE> QuizPersonaE { get; set; }
+        public virtual DbSet<ProfesoresGruposE> ProfesoresGruposE { get; set; }
+        public virtual DbSet<ProfesoresDatosE> ProfesoresDatosE { get; set; }
+        public virtual DbSet<LoginE> LoginE { get; set; }
+        public virtual DbSet<EventosE> EventosE { get; set; }
+        public virtual DbSet<ActividadesE> ActividadesE { get; set; }
+        public virtual DbSet<EventosImagesE> EventosImagesE { get; set; }
+        public virtual DbSet<CertificadosE> CertificadosE { get; set; }
+        public virtual DbSet<InscripcionesCursosE> InscripcionesCursosE { get; set; }
+        public virtual DbSet<InscripcionesCursosHistoricoE> InscripcionesCursosHistoricoE { get; set; }
+        public virtual DbSet<InscripcionesEventosE> InscripcionesEventosE { get; set; }
+        public virtual DbSet<InscripcionesEventosHistoricoE> InscripcionesEventosHistoricoE { get; set; }
+        public virtual DbSet<ConveniosE> ConveniosE { get; set; }
+        public virtual DbSet<ConveniosCursoE> ConveniosCursoE { get; set; }
+        public virtual DbSet<ConveniosPersonasE> ConveniosPersonasE { get; set; }
+        public virtual DbSet<VendedoresE> VendedoresE { get; set; }
+        public virtual DbSet<GruposAnunciosE> GruposAnunciosE { get; set; }
+        public virtual DbSet<GrupoComentariosE> GrupoComentariosE { get; set; }
+        public virtual DbSet<GrupoEstudianteE> GrupoEstudianteE { get; set; }
+        public virtual DbSet<QuizHistoricoE> QuizHistoricoE { get; set; }
+
     }
 }
