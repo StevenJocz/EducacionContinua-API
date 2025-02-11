@@ -10,6 +10,9 @@ namespace Domain.Entities {
     [Table("convenios_personas")]
     public class ConveniosPersonasE
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public required int id { get; set; }
         public required int convenio_id { get; set; }
         public required string documento { get; set; }
         public required int tipo_documento { get; set; }

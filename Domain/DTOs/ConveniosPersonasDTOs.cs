@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace Domain.DTOs {
     public class ConveniosPersonasDTOs
     {
+        public required int Id { get; set; }
         public required int ConvenioId { get; set; }
         public required string Documento { get; set; }
         public required int TipoDocumento { get; set; }
@@ -17,6 +18,7 @@ namespace Domain.DTOs {
         {
             return new ConveniosPersonasDTOs
             {
+                Id = conveniosPersonasE.id,
                 ConvenioId = conveniosPersonasE.convenio_id,
                 Documento = conveniosPersonasE.documento,
                 TipoDocumento = conveniosPersonasE.tipo_documento,
@@ -28,6 +30,7 @@ namespace Domain.DTOs {
         {
             return new ConveniosPersonasE
             {
+                id = conveniosPersonasDTOs.Id,
                 convenio_id = conveniosPersonasDTOs.ConvenioId,
                 documento = conveniosPersonasDTOs.Documento,
                 tipo_documento = conveniosPersonasDTOs.TipoDocumento,

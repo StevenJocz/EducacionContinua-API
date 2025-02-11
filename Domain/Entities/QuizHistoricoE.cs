@@ -10,6 +10,9 @@ namespace Domain.Entities {
     [Table("quiz_historico")]
     public class QuizHistoricoE
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public required int id { get; set; }
         public required int quiz_id { get; set; }
         public required int persona_id { get; set; }
         public int intentos { get; set; } = 0;

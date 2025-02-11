@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace Domain.DTOs {
     public class GrupoEstudianteDTOs
     {
+        public required int Id { get; set; }
         public required int PersonaId { get; set; }
         public required int GrupoId { get; set; }
 
@@ -15,6 +16,7 @@ namespace Domain.DTOs {
         {
             return new GrupoEstudianteDTOs
             {
+                Id = grupoEstudianteE.id,
                 PersonaId = grupoEstudianteE.persona_id,
                 GrupoId = grupoEstudianteE.grupo_id,
             };
@@ -24,6 +26,7 @@ namespace Domain.DTOs {
         {
             return new GrupoEstudianteE
             {
+                id= grupoEstudianteDTOs.Id,
                 persona_id = grupoEstudianteDTOs.PersonaId,
                 grupo_id = grupoEstudianteDTOs.GrupoId,
             };

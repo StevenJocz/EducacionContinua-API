@@ -11,7 +11,6 @@ namespace Domain.Entities {
     public class DependenciasE
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public required int id { get; set; }
 
         public required string nombre { get; set; }

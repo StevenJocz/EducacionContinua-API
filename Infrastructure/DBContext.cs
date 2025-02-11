@@ -1,5 +1,4 @@
 ﻿using Domain.Entities;
-using Domain.Entities.UsuarioE;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -29,7 +28,6 @@ namespace Infrastructure
         }
 
         // Usuario
-        public virtual DbSet<UsuarioE> UsuarioEs { get; set; }
         public virtual DbSet<TipoPersonaE> TipoPersonaE { get; set; }
         public virtual DbSet<TitulosProfesorE> TitulosProfesorE { get; set; }
         public virtual DbSet<DependenciasE> DependenciasE { get; set; }

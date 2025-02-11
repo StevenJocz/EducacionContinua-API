@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace Domain.DTOs {
     public class QuizHistoricoDTOs
     {
+        public required int Id { get; set; }
         public required int QuizId { get; set; }
         public required int PersonaId { get; set; }
         public int Intentos { get; set; } = 0;
@@ -18,6 +19,7 @@ namespace Domain.DTOs {
         {
             return new QuizHistoricoDTOs
             {
+                Id = quizHistoricoE.id,
                 QuizId = quizHistoricoE.quiz_id,
                 PersonaId = quizHistoricoE.persona_id,
                 Intentos = quizHistoricoE.intentos,
@@ -30,6 +32,7 @@ namespace Domain.DTOs {
         {
             return new QuizHistoricoE
             {
+                id = quizHistoricoDTOs.Id,
                 quiz_id = quizHistoricoDTOs.QuizId,
                 persona_id = quizHistoricoDTOs.PersonaId,
                 intentos = quizHistoricoDTOs.Intentos,
