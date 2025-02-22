@@ -16,7 +16,7 @@ namespace Persistence.Queries
         Task<List<CategoriasDTOs>> GetAllCategorias();
         Task<CategoriasDTOs> GetCategoriasById(int id);
         Task<CategoriasDTOs> AddCategorias(CategoriasDTOs categoriasDTOs);
-        Task<bool> UpdateCategorias(int id, CategoriasDTOs categoriasDTOs);
+        Task<bool> UpdateCategorias(CategoriasDTOs categoriasDTOs);
     }
 
     public class CategoriasQuerie : ICategoriasQuerie, IDisposable
@@ -112,11 +112,11 @@ namespace Persistence.Queries
         }
 
         // Update an existing Categoria
-        public async Task<bool> UpdateCategorias(int id, CategoriasDTOs categoriasDTOs)
+        public async Task<bool> UpdateCategorias(CategoriasDTOs categoriasDTOs)
         {
             try
             {
-                var categoria = await _context.CategoriasE.FindAsync(id);
+                var categoria = await _context.CategoriasE.FindAsync(categoriasDTOs.Id);
                 if (categoria == null) return false;
 
                 categoria.nombre = categoriasDTOs.Nombre;

@@ -65,13 +65,13 @@ namespace PlanEstrategico.API.Controllers
             }
         }
 
-        [HttpPost("Post_Update_Dependencias")]
-        public async Task<IActionResult> UpdateDependencias(int id, [FromBody] DependenciasDTOs dependenciasDTOs)
+        [HttpPut("Put_Update_Dependencias")]
+        public async Task<IActionResult> UpdateDependencias([FromBody] DependenciasDTOs dependenciasDTOs)
         {
             try
             {
                 _logger.LogInformation("Iniciando DependenciasController.UpdateDependencias...");
-                var respuesta = await _dependenciasQuerie.UpdateDependencias(id, dependenciasDTOs);
+                var respuesta = await _dependenciasQuerie.UpdateDependencias(dependenciasDTOs);
                 return Ok(respuesta);
             }
             catch (Exception)

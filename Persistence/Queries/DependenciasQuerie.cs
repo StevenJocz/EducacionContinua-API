@@ -16,7 +16,7 @@ namespace Persistence.Queries
         Task<List<DependenciasDTOs>> GetAllDependencias();
         Task<DependenciasDTOs> GetDependenciasById(int id);
         Task<DependenciasDTOs> AddDependencias(DependenciasDTOs dependenciasDTOs);
-        Task<bool> UpdateDependencias(int id, DependenciasDTOs dependenciasDTOs);
+        Task<bool> UpdateDependencias(DependenciasDTOs dependenciasDTOs);
     }
 
     public class DependenciasQuerie : IDependenciasQuerie, IDisposable
@@ -112,11 +112,11 @@ namespace Persistence.Queries
         }
 
         // Update an existing Dependencias
-        public async Task<bool> UpdateDependencias(int id, DependenciasDTOs dependenciasDTOs)
+        public async Task<bool> UpdateDependencias(DependenciasDTOs dependenciasDTOs)
         {
             try
             {
-                var dependencia = await _context.DependenciasE.FindAsync(id);
+                var dependencia = await _context.DependenciasE.FindAsync(dependenciasDTOs.Id);
                 if (dependencia == null) return false;
 
                 dependencia.nombre = dependenciasDTOs.Nombre;

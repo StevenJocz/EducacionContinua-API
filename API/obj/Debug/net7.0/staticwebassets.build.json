@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VRJXYy3OY9d/8OOtR81ci10ERrIPTI6a1OgTZ4TBBwc=",
+  "Hash": "Jix9c9IB4ttf1aS8c+MDfpj9CDJEPJqD/iCiXzbtnYs=",
   "Source": "EducacionContinua",
   "BasePath": "_content/EducacionContinua",
   "Mode": "Default",
@@ -10,24 +10,22 @@
     {
       "Name": "EducacionContinua\\wwwroot",
       "Source": "EducacionContinua",
-      "ContentRoot": "D:\\Otros Proyectos\\EducacionContinua-API\\API\\wwwroot\\",
+      "ContentRoot": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\",
       "BasePath": "_content/EducacionContinua",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Otros Proyectos\\EducacionContinua-API\\API\\wwwroot\\Imagenes\\6a313186-949a-483c-87e4-6baa444bf242.jpeg",
+      "Identity": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\6a313186-949a-483c-87e4-6baa444bf242.jpeg",
       "SourceId": "EducacionContinua",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Otros Proyectos\\EducacionContinua-API\\API\\wwwroot\\",
+      "ContentRoot": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\",
       "BasePath": "_content/EducacionContinua",
       "RelativePath": "Imagenes/6a313186-949a-483c-87e4-6baa444bf242.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",

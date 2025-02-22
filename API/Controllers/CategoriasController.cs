@@ -65,13 +65,13 @@ namespace PlanEstrategico.API.Controllers
             }
         }
 
-        [HttpPost("Post_Update_Categoria")]
-        public async Task<IActionResult> UpdateCategoria(int id, [FromBody] CategoriasDTOs categoriasDTOs)
+        [HttpPut("Put_Update_Categoria")]
+        public async Task<IActionResult> UpdateCategoria([FromBody] CategoriasDTOs categoriasDTOs)
         {
             try
             {
                 _logger.LogInformation("Iniciando CategoriasController.UpdateCategoria...");
-                var respuesta = await _categoriasQuerie.UpdateCategorias(id, categoriasDTOs);
+                var respuesta = await _categoriasQuerie.UpdateCategorias(categoriasDTOs);
                 return Ok(respuesta);
             }
             catch (Exception)
