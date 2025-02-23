@@ -65,7 +65,7 @@ namespace Persistence.Queries
         }
         #endregion
 
-        // Get all Cursos records
+        // Get all Cursos Admin
         public async Task<List<CursoAdminDTOs>> GetAllCursosAdmin()
         {
             try
@@ -126,7 +126,7 @@ namespace Persistence.Queries
             }
         }
 
-        // Get a Cursos by ID
+        // Get a Cursos by ID Admin 
         public async Task<CursoIdAdminDTOs> GetCursosByIdAdmin(int id)
         {
             try
