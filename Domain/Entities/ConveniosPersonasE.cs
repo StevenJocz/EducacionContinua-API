@@ -15,7 +15,7 @@ namespace Domain.Entities {
         public required int id { get; set; }
         public required int convenio_id { get; set; }
         public required string documento { get; set; }
-        public required int tipo_documento { get; set; }
+        public required string tipo_documento { get; set; }
         public required string nombre { get; set; }
     }
 } 

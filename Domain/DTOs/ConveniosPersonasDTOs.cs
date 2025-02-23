@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace Domain.DTOs {
     public class ConveniosPersonasDTOs
     {
-        public required int Id { get; set; }
+        public int Id { get; set; }
         public required int ConvenioId { get; set; }
         public required string Documento { get; set; }
-        public required int TipoDocumento { get; set; }
+        public required string TipoDocumento { get; set; }
         public required string Nombre { get; set; }
 
         public static ConveniosPersonasDTOs CreateDTO(ConveniosPersonasE conveniosPersonasE)
@@ -20,7 +20,7 @@ namespace Domain.DTOs {
             {
                 Id = conveniosPersonasE.id,
                 ConvenioId = conveniosPersonasE.convenio_id,
-                Documento = conveniosPersonasE.documento,
+                Documento =  conveniosPersonasE.documento,
                 TipoDocumento = conveniosPersonasE.tipo_documento,
                 Nombre = conveniosPersonasE.nombre,
             };

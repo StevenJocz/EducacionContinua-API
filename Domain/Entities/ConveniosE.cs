@@ -13,7 +13,13 @@ namespace Domain.Entities {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public required int id { get; set; }
-
+        public required int curso_id { get; set; }
         public required string nombre { get; set; }
+        public required string nit { get; set; }
+        public required string correo { get; set; }
+        public required string telefono { get; set; }
+        public required DateTime fecha_inicio { get; set; }
+        public required DateTime fecha_fin { get; set; }
+        public required string observacion { get; set; }
     }
 } 

@@ -120,7 +120,7 @@ namespace Persistence.Queries
                 if (conveniosPersonas == null) return false;
 
                 conveniosPersonas.convenio_id = conveniosPersonasDTOs.ConvenioId;
-                conveniosPersonas.documento = conveniosPersonasDTOs.Documento;
+                conveniosPersonas.documento = conveniosPersonasDTOs.Documento.ToString();
                 conveniosPersonas.tipo_documento = conveniosPersonasDTOs.TipoDocumento;
                 conveniosPersonas.nombre = conveniosPersonasDTOs.Nombre;
 

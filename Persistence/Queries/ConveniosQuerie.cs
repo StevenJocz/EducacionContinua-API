@@ -8,14 +8,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Domain.Entities;
 
 namespace Persistence.Queries
 {
     public interface IConveniosQuerie
     {
-        Task<List<ConveniosDTOs>> GetAllConvenios();
+        Task<List<listConveniosDTOs>> GetAllConvenios();
         Task<ConveniosDTOs> GetConveniosById(int id);
-        Task<ConveniosDTOs> AddConvenios(ConveniosDTOs conveniosDTOs);
+        Task<bool> AddConvenios(ConveniosDTOs conveniosDTOs);
         Task<bool> UpdateConvenios(int id, ConveniosDTOs conveniosDTOs);
     }
 
@@ -56,7 +57,7 @@ namespace Persistence.Queries
         #endregion
 
         // Get all Convenios records
-        public async Task<List<ConveniosDTOs>> GetAllConvenios()
+        public async Task<List<listConveniosDTOs>> GetAllConvenios()
         {
             try
             {
@@ -64,12 +65,36 @@ namespace Persistence.Queries
                     .Select(c => ConveniosDTOs.CreateDTO(c))
                     .ToListAsync();
 
-                return convenios;
+                var listaConvenios = new List<listConveniosDTOs>();
+                
+                foreach (var registro in convenios)
+                {
+                    var cursoNombre = await _context.CursosE
+                                            .Where(c => c.id == registro.IdCurso) 
+                                            .Select(c => c.nombre)  
+                                            .FirstOrDefaultAsync();
+
+                    var lista = new listConveniosDTOs
+                    {
+                        Id = registro.Id,
+                        Nombre = registro.Nombre,
+                        Nit = registro.Nit,
+                        FechaInicio = registro.FechaInicio.ToString(),
+                        FechaFin = registro.FechaFin.ToString(),
+                        Curso = cursoNombre,
+                        Estado = DateTime.Now > registro.FechaFin ? false : true,
+                    };
+
+                    listaConvenios.Add(lista);
+                }
+
+
+                return listaConvenios;
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Error in {nameof(GetAllConvenios)}: {ex.Message}");
-                return new List<ConveniosDTOs>();
+                return new List<listConveniosDTOs>();
             }
         }
 
@@ -93,21 +118,38 @@ namespace Persistence.Queries
         }
 
         // Add a new Convenios
-        public async Task<ConveniosDTOs> AddConvenios(ConveniosDTOs conveniosDTOs)
+        public async Task<bool> AddConvenios(ConveniosDTOs conveniosDTOs)
         {
             try
             {
                 var convenios = ConveniosDTOs.CreateE(conveniosDTOs);
-
                 _context.ConveniosE.Add(convenios);
                 await _context.SaveChangesAsync();
 
-                return ConveniosDTOs.CreateDTO(convenios);
+                if (convenios.id > 0 )
+                {
+                    foreach (var registro in conveniosDTOs.registros)
+                    {
+                        var newRegistro = new ConveniosPersonasDTOs
+                        {
+                            ConvenioId = convenios.id,
+                            Documento = registro.Documento,
+                            TipoDocumento = registro.TipoDocumento,
+                            Nombre = registro.Nombre
+                        };
+
+                        var convenioE = ConveniosPersonasDTOs.CreateE(newRegistro);
+                        await _context.ConveniosPersonasE.AddAsync(convenioE);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
+                return true;
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Error in {nameof(AddConvenios)}: {ex.Message}");
-                return null;
+                return false;
             }
         }
 
