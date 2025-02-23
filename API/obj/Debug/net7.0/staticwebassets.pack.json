@@ -1,8 +1,32 @@
 {
   "Files": [
     {
-      "Id": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\6a313186-949a-483c-87e4-6baa444bf242.jpeg",
-      "PackagePath": "staticwebassets\\Imagenes\\6a313186-949a-483c-87e4-6baa444bf242.jpeg"
+      "Id": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\ImagenesCursos\\09749165-f37d-46d9-a813-da98dedf284d.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\ImagenesCursos\\09749165-f37d-46d9-a813-da98dedf284d.jpg"
+    },
+    {
+      "Id": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\ImagenesCursos\\64a8a585-195d-4fd7-95a7-7e2a804424a8.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\ImagenesCursos\\64a8a585-195d-4fd7-95a7-7e2a804424a8.jpg"
+    },
+    {
+      "Id": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\ImagenesCursos\\6a313186-949a-483c-87e4-6baa444bf242.jpeg",
+      "PackagePath": "staticwebassets\\Imagenes\\ImagenesCursos\\6a313186-949a-483c-87e4-6baa444bf242.jpeg"
+    },
+    {
+      "Id": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\ImagenesCursos\\802ece5d-652f-4546-b0c5-01636dbf3e07.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\ImagenesCursos\\802ece5d-652f-4546-b0c5-01636dbf3e07.jpg"
+    },
+    {
+      "Id": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\ImagenesCursos\\9d06369e-4bd8-4b9c-a7c6-a1bce5d8f8d1.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\ImagenesCursos\\9d06369e-4bd8-4b9c-a7c6-a1bce5d8f8d1.jpg"
+    },
+    {
+      "Id": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\ImagenesCursos\\b8a93fdb-fd15-4114-b9f1-f127be6aeba3.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\ImagenesCursos\\b8a93fdb-fd15-4114-b9f1-f127be6aeba3.jpg"
+    },
+    {
+      "Id": "D:\\Proyectos Desarrollo\\MaosWord\\Service\\API\\wwwroot\\Imagenes\\ImagenesCursos\\ff6be772-b954-4c2c-805a-73bc2ab5e41d.jpg",
+      "PackagePath": "staticwebassets\\Imagenes\\ImagenesCursos\\ff6be772-b954-4c2c-805a-73bc2ab5e41d.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.EducacionContinua.Microsoft.AspNetCore.StaticWebAssets.props",

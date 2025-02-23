@@ -34,6 +34,8 @@ namespace Infrastructure
         public virtual DbSet<CategoriasE> CategoriasE { get; set; }
         public virtual DbSet<PersonasE> PersonasE { get; set; }
         public virtual DbSet<CursosE> CursosE { get; set; }
+        public virtual DbSet<CursoCategoriaE> CursoCategoriaE { get; set; }
+        public virtual DbSet<CursoAprendizajeE> CursoAprendizajeE { get; set; }
         public virtual DbSet<ModulosE> ModulosE { get; set; }
         public virtual DbSet<CuponesE> CuponesE { get; set; }
         public virtual DbSet<GruposE> GruposE { get; set; }
@@ -61,6 +63,9 @@ namespace Infrastructure
         public virtual DbSet<GrupoComentariosE> GrupoComentariosE { get; set; }
         public virtual DbSet<GrupoEstudianteE> GrupoEstudianteE { get; set; }
         public virtual DbSet<QuizHistoricoE> QuizHistoricoE { get; set; }
+        public virtual DbSet<TipoDocumentosE> TipoDocumentosE { get; set; }
+        public virtual DbSet<TipoDireccionesE> TipoDireccionesE { get; set; }
+        public virtual DbSet<FaqsE> FaqsE { get; set; }
 
     }
 }

@@ -13,13 +13,10 @@ namespace Domain.Entities {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public required int id { get; set; }
-
-        public required int categoria_id { get; set; }
-
         public required int dependencia_id { get; set; }
-
         public required string nombre { get; set; }
         public string? descripcion { get; set; }
+        public string? paraquien { get; set; }
         public string? imagen { get; set; }
         public required string codigo { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using Persistence.Commands;
+﻿using Domain.Utilidades;
+using Persistence.Commands;
 using Persistence.Queries;
 
 namespace EducacionContinua.Application
@@ -42,8 +43,12 @@ namespace EducacionContinua.Application
             service.AddTransient<IGrupoComentariosQuerie, GrupoComentariosQuerie>();
             service.AddTransient<IGrupoEstudianteQuerie, GrupoEstudianteQuerie>();
             service.AddTransient<IQuizHistoricoQuerie, QuizHistoricoQuerie>();
+            service.AddTransient<ITipoDocumentosQuerie, TipoDocumentosQuerie>();
+            service.AddTransient<ITipoDireccionesQuerie, TipoDireccionesQuerie>();
+            service.AddTransient<IFaqsQuerie, FaqsQuerie>();
 
             // Utilidades
+            service.AddScoped<IImagenes, Imagenes>();
 
             // Email
 

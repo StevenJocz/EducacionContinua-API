@@ -17,13 +17,13 @@ namespace PlanEstrategico.API.Controllers
             _logger = logger;
         }
 
-        [HttpGet("GetAllCursos")]
-        public async Task<IActionResult> GetAllCursos()
+        [HttpGet("GetAllCursosAdmin")]
+        public async Task<IActionResult> GetAllCursosAdmin()
         {
             _logger.LogTrace("Iniciando metodo CursosController.GetAllCursos...");
             try
             {
-                var uResult = await _cursosQuerie.GetAllCursos();
+                var uResult = await _cursosQuerie.GetAllCursosAdmin();
                 return Ok(uResult);
             }
             catch (Exception)
@@ -33,13 +33,13 @@ namespace PlanEstrategico.API.Controllers
             }
         }
 
-        [HttpGet("GetCursosById")]
-        public async Task<IActionResult> GetCursosById(int id)
+        [HttpGet("GetCursosByIdAdmin")]
+        public async Task<IActionResult> GetCursosByIdAdmin(int id)
         {
             _logger.LogTrace("Iniciando metodo CursosController.GetCursosById...");
             try
             {
-                var uResult = await _cursosQuerie.GetCursosById(id);
+                var uResult = await _cursosQuerie.GetCursosByIdAdmin(id);
                 return Ok(uResult);
             }
             catch (Exception)
@@ -50,12 +50,12 @@ namespace PlanEstrategico.API.Controllers
         }
 
         [HttpPost("Post_Create_Cursos")]
-        public async Task<IActionResult> CreateCursos([FromBody] CursosDTOs cursosDTOs)
+        public async Task<IActionResult> CreateCursos([FromBody] AddCursoDTOs addCursoDTOs)
         {
             try
             {
                 _logger.LogInformation("Iniciando CursosController.CreateCursos...");
-                var respuesta = await _cursosQuerie.AddCursos(cursosDTOs);
+                var respuesta = await _cursosQuerie.AddCursos(addCursoDTOs);
                 return Ok(respuesta);
             }
             catch (Exception)
@@ -65,7 +65,7 @@ namespace PlanEstrategico.API.Controllers
             }
         }
 
-        [HttpPost("Post_Update_Cursos")]
+        [HttpPut("Put_Update_Cursos")]
         public async Task<IActionResult> UpdateCursos(int id, [FromBody] CursosDTOs cursosDTOs)
         {
             try
